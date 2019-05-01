@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Lato";
+}
+
+/* HEADER */
+
+header > nav {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+header > nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+header > nav > ul > li {
+  padding: 0.5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* HERO */
+
+#hero {
+  background: url(assets/dog.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+#hero > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20vh;
+  text-align: center;
+}
+
+#hero > div > h1 {
+  font-size: 5em;
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+#hero > div > p {
+  font-size: 1.5em;
+  width: 40%;
+}
+
+#hero > div > #button {
+  font-size: 1.5em;
+  width: 8em;
+  height: 4em;
+  border-radius: 8em;
+  background-color: #ffa500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* SERVICE */
+
+#service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7.5em;
+}
+
+#service > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
+
+#service > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40em;
+  padding: 3em;
+  text-align: center;
+}
+
+#service > div > div img {
+  width: 6em;
+}
+
+/* REVIEWS */
+
+#reviews > div {
+  position: relative;
+  display: flex;
+  background-color: rgba(240, 240, 240, 0.815);
+  margin-top: 10em;
+  height: 50vh;
+}
+
+#reviews > div > img {
+  height: 55em;
+  position: absolute;
+  z-index: 1;
+  right: 12vw;
+  top: -10em;
+}
+
+#reviews > div > div {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-left: 12vw;
+}
+
+/* RESULTS */
+
+#results {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #ffa500;
+  height: 30vh;
+  color: #fff;
+}
+
+#results > div > p {
+  padding: 2em;
+}
+
+#results > div {
+  display: flex;
+}
+
+/* OFFER */
+
+#offer {
+  display: flex;
+}
