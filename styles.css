@@ -5,6 +5,25 @@ body {
   font-family: "Lato";
 }
 
+.button {
+  font-size: 1em;
+  width: 10em;
+  height: 3em;
+  border-radius: 8em;
+  background-color: #f88360;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.scroll {
+  background-color: #757575;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 1.2em;
+}
+
 /* HEADER */
 
 header > nav {
@@ -13,7 +32,8 @@ header > nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 1.3em;
+  font-size: 1.6em;
+  z-index: 3;
 }
 
 h1 {
@@ -38,16 +58,19 @@ a {
 #hero {
   background: url(assets/dog.jpg) no-repeat center center fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
 #hero > div {
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding-top: 20vh;
-  text-align: center;
 }
 
 #hero > div > h1 {
@@ -61,12 +84,12 @@ a {
   width: 40%;
 }
 
-#hero > div > #button {
+#hero > div > .button {
   font-size: 1.5em;
   width: 8em;
   height: 4em;
   border-radius: 8em;
-  background-color: #ffa500;
+  background-color: #f88360;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -109,7 +132,7 @@ a {
 #reviews > div {
   position: relative;
   display: flex;
-  background-color: rgba(240, 240, 240, 0.815);
+  background-color: #fafafa;
   margin-top: 10em;
   height: 50vh;
 }
@@ -131,6 +154,10 @@ a {
   margin-left: 12vw;
 }
 
+#reviews > div > div > img {
+  width: 2em;
+}
+
 /* RESULTS */
 
 #results {
@@ -139,7 +166,7 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #ffa500;
+  background-color: #f88360;
   height: 30vh;
   color: #fff;
 }
@@ -156,4 +183,40 @@ a {
 
 #offer {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#offer > div:nth-child(1) {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#offers {
+  display: flex;
+}
+
+.offer-card {
+  height: 100%;
+  margin: 1em;
+  padding: 3em;
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+  background-color: #fafafa;
+}
+
+/* FOOTER */
+
+footer {
+  height: 40vh;
+  background-color: #333333;
 }
