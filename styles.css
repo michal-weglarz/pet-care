@@ -138,7 +138,7 @@ a {
 }
 
 #reviews > div > img {
-  height: 55em;
+  height: 50em;
   position: absolute;
   z-index: 1;
   right: 12vw;
@@ -185,13 +185,28 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 75vh;
 }
 
-#offer > div:nth-child(1) {
-  width: 25%;
+#offer > div:first-child {
+  width: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2em;
+}
+
+#offer > div:first-child > h3 {
+  font-size: 2em;
+}
+
+#offer > div:first-child > p {
+  color: rgb(151, 149, 149);
+}
+
+#offer > div:first-child > img {
+  width: 17.5em;
 }
 
 #offers {
@@ -199,9 +214,46 @@ a {
 }
 
 .offer-card {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1em;
   padding: 3em;
+  border-radius: 1em;
+  background-color: rgba(247, 245, 245, 0.596);
+  transition: all 0.3s ease;
+}
+
+.offer-card > p:first-child {
+  font-size: 1.2em;
+}
+
+.offer-card > p:nth-child(2) {
+  font-size: 2em;
+}
+
+.offer-card > p:nth-child(n + 3):nth-child(-n + 6) {
+  color: rgb(131, 128, 128);
+}
+
+.offer-card > .button {
+  border: 2px solid #f88360;
+  background-color: rgba(247, 245, 245, 0.596);
+  color: #f88360;
+  margin-top: 2em;
+  transition: all 0.6s ease;
+}
+
+.offer-card:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 50px rgb(189, 186, 186);
+}
+
+.offer-card:hover > .button {
+  background-color: #f88360;
+  color: #fff;
 }
 
 /* CONTACT */
@@ -214,9 +266,59 @@ a {
   background-color: #fafafa;
 }
 
+#contact > div:first-child > h3 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+#contact > div:first-child > p {
+  color: rgb(131, 128, 128);
+}
+
 /* FOOTER */
 
 footer {
-  height: 40vh;
+  height: 30vh;
   background-color: #333333;
+  display: flex;
+  flex-direction: column;
+}
+
+footer > div:first-child {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+  border-bottom: 2px solid rgba(206, 204, 204, 0.61);
+}
+
+footer > div:first-child > h4 {
+  font-size: 1.3rem;
+}
+
+footer > div:first-child > ul {
+  list-style: none;
+  display: flex;
+}
+
+footer > div:first-child > ul > li {
+  padding: 2em;
+}
+
+footer > div:nth-child(2) {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > div:nth-child(2) > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #fff;
+}
+
+footer > div:nth-child(2) > div > p {
+  max-width: 50%;
 }
