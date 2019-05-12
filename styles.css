@@ -5,6 +5,10 @@ body {
   font-family: "Lato";
 }
 
+a {
+  color: #000;
+}
+
 .button {
   font-size: 1em;
   width: 10em;
@@ -18,10 +22,14 @@ body {
 }
 
 .scroll {
-  background-color: #757575;
+  background-color: rgb(222, 95, 58);
   transition: all 0.3s ease;
   color: #fff;
   font-size: 1.2em;
+}
+
+.scroll > ul > li > a {
+  color: #fff;
 }
 
 /* HEADER */
@@ -34,6 +42,7 @@ header > nav {
   align-items: center;
   font-size: 1.6em;
   z-index: 3;
+  transition: all 0.3s ease;
 }
 
 h1 {
@@ -55,9 +64,20 @@ a {
 
 /* HERO */
 
-#hero {
+#hero::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background: url(assets/dog.jpg) no-repeat center center fixed;
   background-size: cover;
+  content: "";
+  z-index: -1;
+  opacity: 0.85;
+}
+
+#hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,6 +149,11 @@ a {
 
 /* REVIEWS */
 
+#quotation-mark {
+  position: absolute;
+  z-index: 1;
+}
+
 #reviews > div {
   position: relative;
   display: flex;
@@ -145,17 +170,29 @@ a {
   top: -10em;
 }
 
-#reviews > div > div {
-  width: 40vw;
+#reviewsContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin-left: 12vw;
+  width: 100%;
 }
 
-#reviews > div > div > img {
+.review {
+  font-size: 1.35em;
+  width: 40%;
+}
+
+.review:first-child {
+}
+
+.reviewButtons {
+}
+
+.reviewButton {
   width: 2em;
+}
+
+.reviewButton:hover {
+  cursor: pointer;
 }
 
 /* RESULTS */
@@ -169,6 +206,11 @@ a {
   background-color: #f88360;
   height: 30vh;
   color: #fff;
+}
+
+#results > h3 {
+  font-size: 2em;
+  max-width: 15em;
 }
 
 #results > div > p {
@@ -293,7 +335,7 @@ footer > div:first-child {
 }
 
 footer > div:first-child > h4 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 footer > div:first-child > ul {
@@ -314,9 +356,9 @@ footer > div:nth-child(2) {
 
 footer > div:nth-child(2) > div {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  color: #fff;
+  color: rgba(151, 149, 149, 0.651);
 }
 
 footer > div:nth-child(2) > div > p {
