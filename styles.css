@@ -32,6 +32,10 @@ a {
   color: #fff;
 }
 
+.scroll > #logo img {
+  filter: invert(100%);
+}
+
 /* HEADER */
 
 header > nav {
@@ -60,6 +64,10 @@ header > nav > ul > li {
 
 a {
   text-decoration: none;
+}
+
+#logo img {
+  width: 3em;
 }
 
 /* HERO */
@@ -122,6 +130,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 7.5em;
 }
@@ -147,11 +156,25 @@ a {
   width: 6em;
 }
 
+@media screen and (max-width: 1000px) {
+  #service > div > div {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #service > div {
+    flex-wrap: wrap;
+  }
+  #service > div > div:first-child {
+    flex-basis: 100%;
+  }
+}
+
 /* REVIEWS */
 
 #quotation-mark {
-  position: absolute;
-  z-index: 1;
+  width: 2em;
 }
 
 #reviews > div {
@@ -173,18 +196,34 @@ a {
 #reviewsContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
+  margin-left: 15vw;
 }
 
 .review {
   font-size: 1.35em;
   width: 40%;
+  position: absolute;
+  opacity: 0;
+  transition: visibility 0.3s linear, opacity 0.3s linear;
 }
 
-.review:first-child {
+#reviewsContainer > .review:not(:nth-of-type(1)) {
+  visibility: hidden;
 }
 
 .reviewButtons {
+  position: relative;
+  top: 9em;
+}
+
+.reviewButtons img {
+  height: 1.85em;
+}
+
+#prevReview {
+  padding-right: 1em;
 }
 
 .reviewButton {
@@ -193,6 +232,55 @@ a {
 
 .reviewButton:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 1513px) {
+  .reviewButtons {
+    top: 11em;
+  }
+}
+@media screen and (max-width: 1250px) {
+  #reviewsContainer {
+    margin-left: 10vw;
+  }
+  #reviews > div > img {
+    height: 40em;
+    position: absolute;
+    z-index: 1;
+    right: 12vw;
+    top: -3em;
+  }
+  .reviewButtons {
+    top: 13em;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  #reviews > div > img {
+    height: 30em;
+    position: absolute;
+    z-index: 1;
+    right: 12vw;
+    top: 5em;
+  }
+  .review {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  #reviews > div > img {
+    display: none;
+  }
+  #reviewsContainer {
+    margin-left: 0;
+    padding: 2em;
+    display: flex;
+    justify-content: center;
+  }
+  .review {
+    width: 80%;
+  }
 }
 
 /* RESULTS */
@@ -219,6 +307,16 @@ a {
 
 #results > div {
   display: flex;
+  width: 20%;
+  justify-content: space-around;
+  align-content: center;
+  padding: 2em;
+}
+
+#results-item {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
 }
 
 /* OFFER */
@@ -227,7 +325,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh;
 }
 
 #offer > div:first-child {
@@ -239,7 +336,11 @@ a {
   padding: 2em;
 }
 
-#offer > div:first-child > h3 {
+#offer > * {
+  padding: 5em;
+}
+
+#offer > div:first-child > div > h3 {
   font-size: 2em;
 }
 
@@ -283,7 +384,7 @@ a {
   border: 2px solid #f88360;
   background-color: rgba(247, 245, 245, 0.596);
   color: #f88360;
-  margin-top: 2em;
+  margin-top: 5%;
   transition: all 0.6s ease;
 }
 
@@ -296,6 +397,39 @@ a {
 .offer-card:hover > .button {
   background-color: #f88360;
   color: #fff;
+}
+
+@media screen and (max-width: 990px) {
+  #offer {
+    flex-wrap: wrap;
+  }
+  #offer > div:first-child {
+    flex-direction: row;
+    flex-basis: 100%;
+    margin: 5em 5em 2.5em 5em;
+  }
+
+  #offers {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #offer {
+    flex-wrap: wrap;
+  }
+  #offer > div:first-child {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 580px) {
+  #offers {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* CONTACT */
@@ -331,7 +465,6 @@ footer > div:first-child {
   justify-content: space-evenly;
   align-items: center;
   color: #fff;
-  border-bottom: 2px solid rgba(206, 204, 204, 0.61);
 }
 
 footer > div:first-child > h4 {
@@ -347,20 +480,36 @@ footer > div:first-child > ul > li {
   padding: 2em;
 }
 
-footer > div:nth-child(2) {
+footer > div:nth-child(3) {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-footer > div:nth-child(2) > div {
+footer > div:nth-child(3) > div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   color: rgba(151, 149, 149, 0.651);
 }
 
-footer > div:nth-child(2) > div > p {
+footer > div:nth-child(3) > div > p {
   max-width: 50%;
+}
+
+#terms-of-service {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#terms-of-service * {
+  padding: 1em;
+}
+
+#separator {
+  height: 1px;
+  width: 68vw;
+  background-color: rgba(151, 151, 151, 0.562);
+  align-self: center;
 }

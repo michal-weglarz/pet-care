@@ -14,15 +14,16 @@ window.onscroll = () => {
 
 const reviewButtons = document.querySelectorAll(".reviewButton");
 let allReviews = Array.from(document.querySelectorAll(".review"));
-allReviews.forEach((item, idx) => {
-  if (idx !== 0) item.style.display = "none";
-});
 
 let changeReviews = (pressType, indexToShow) => {
   allReviews.forEach((item, index) => {
     if (index === indexToShow) {
-      item.style.display = "block";
-    } else item.style.display = "none";
+      item.style.visibility = "visible";
+      item.style.opacity = 1;
+    } else {
+      item.style.visibility = "hidden";
+      item.style.opacity = 0;
+    }
   });
 };
 
