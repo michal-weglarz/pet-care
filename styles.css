@@ -495,7 +495,19 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 1.2em;
+}
 
+.results-item  div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.resultsIcon {
+  width: 2em;
+  filter: invert(100%);
+  padding: 0.6em;
 }
 
 @media screen and (max-width: 720px) {
