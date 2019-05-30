@@ -46,6 +46,8 @@ a {
   filter: invert(100%);
 }
 
+
+
 /* HEADER */
 
 header > nav {
@@ -78,6 +80,25 @@ a {
 
 #logo img {
   width: 3em;
+}
+
+@media screen and (max-width: 600px) {
+  header > nav {
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 360px) {
+ 
+  header > nav {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 487px) {
+  header > nav {
+    position: static
+  }
 }
 
 /* HERO */
@@ -130,6 +151,23 @@ a {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+@media screen and (max-width: 360px) {
+ 
+  #hero > div > h1 {
+    font-size: 2em;
+  }
+
+  #hero > div > p {
+  font-size: 1em;
+  width: 60%;
+  }
+  #hero > div > .button {
+    font-size: 1em;
+   
+  }
+}
+
+
 /* SERVICE */
 
 #service {
@@ -143,6 +181,12 @@ a {
 
 #service > h3 {
   font-size: 2em
+}
+
+#service > p {
+  padding: 0 1em;
+  text-align: center;
+  max-width: 30em;
 }
 
 #service > div {
@@ -180,6 +224,15 @@ a {
     flex-basis: 100%;
   }
 }
+
+@media screen and (max-width: 360px) {
+ 
+  #service > p {
+    padding: 0 1em;
+    text-align: center;
+  }
+}
+
 
 /* REVIEWS */
 
@@ -281,36 +334,60 @@ a {
     right: 7vw;
   }
 }
+
+@media screen and (max-width: 1400px) {
+
+  .reviewButtons {
+    top: 14em;
+  }
+
+}
+
 @media screen and (max-width: 1250px) {
   #reviewsContainer {
     margin-left: 10vw;
   }
   #reviews > div > img {
     height: 40em;
-    position: absolute;
-    z-index: 1;
-    right: 12vw;
-    top: -3em;
+    right: 10vw;
+    top: -2em;
+  }
+
+  .reviewButtons {
+    top: 15em;
   }
 
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1000px) {
   .reviewButtons {
     top: 16em;
+  }
+  #reviews > div > img {
+    height: 30em;
+    right: 10vw;
+    top: 5em;
   }
 }
 
 @media screen and (max-width: 920px) {
   #reviews > div > img {
     height: 30em;
-    position: absolute;
-    z-index: 1;
     right: 12vw;
     top: 5em;
   }
   .review {
     width: 35%;
+  }
+  .reviewButtons {
+    top: 17em;
+  }
+}
+
+@media screen and (max-width: 840px) {
+
+  .reviewButtons {
+    top: 18em;
   }
 }
 
@@ -326,6 +403,29 @@ a {
   }
   .review {
     width: 80%;
+  }
+  .reviewButtons {
+    top: 14em;
+  }
+}
+
+@media screen and (max-width: 565px) {
+
+  .reviewButtons {
+    top: 15em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #reviewsContainer {
+    position: relative;
+    top: -8em;
+  }
+  .review {
+    font-size: 0.82em;
+  }
+  .reviewButtons {
+    top: 9.25em;
   }
 }
 
@@ -343,27 +443,54 @@ a {
 }
 
 #results > h3 {
+  padding: 0em 2em 0 2em;
   font-size: 2em;
   max-width: 15em;
+  margin-bottom: 0;
 }
 
-#results > div > p {
-  padding: 2em;
+.results-item > div > p {
+  font-size: 1.4em;
 }
 
 #results > div {
   display: flex;
-  width: 20%;
+  width: 40%;
   justify-content: space-around;
-  align-content: center;
   padding: 2em;
 }
 
-#results-item {
+.results-item {
   display: flex;
   flex-direction: column;
-  margin: 2em;
+  align-items: center;
+  padding: 1.2em;
+
 }
+
+@media screen and (max-width: 720px) {
+  #results  {
+    flex-wrap: wrap;
+  }
+  #results > h3 {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  #results {
+    height: 40vh;
+   
+  }
+  
+}
+
+@media screen and (max-width: 360px) {
+  #results > h3 {
+    font-size: 1.5em;
+   
+  }
+  
+}
+
 
 /* OFFER */
 
@@ -488,6 +615,10 @@ a {
   background-color: #fafafa;
 }
 
+#contact > div {
+  max-width: 35vw;
+}
+
 #contact > div:first-child > h3 {
   font-size: 2em;
   margin-bottom: 0;
@@ -497,10 +628,43 @@ a {
   color: rgb(131, 128, 128);
 }
 
+
+@media screen and (max-width: 990px) {
+  #contact {
+    height: 30vh
+  }
+  #contact > div {
+    min-width: 35vw;
+  }
+}
+
+
+@media screen and (max-width: 560px) {
+  #contact {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #contact >  div:first-of-type {
+    flex-basis: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2em;
+
+  }
+  #contact .button {
+    margin-bottom: 2em;
+    font-size: 0.75em;
+  }
+}
+
+
 /* FOOTER */
 
 footer {
-  height: 30vh;
+  min-height: 30vh;
   background-color: #333333;
   display: flex;
   flex-direction: column;
@@ -559,3 +723,36 @@ footer > div:nth-child(3) > div > p {
   background-color: rgba(151, 151, 151, 0.562);
   align-self: center;
 }
+
+@media screen and (max-width: 700px) {
+  footer > div:first-of-type {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center
+  }
+  footer > div:first-of-type > h4 {
+    flex-basis: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  footer > div:first-of-type > ul {
+    padding: 0
+  }
+  footer > div:first-of-type > #footer-icons {
+    visibility: hidden
+  }
+}
+
+@media screen and (max-width: 430px) {
+  footer > div:first-of-type > ul > li {
+    padding: 0.75em
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  footer > div:first-of-type > ul  {
+    flex-wrap: wrap;
+  }
+}
+
