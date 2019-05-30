@@ -1,12 +1,12 @@
 
-body {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: "Lato";
 
-overflow-x: hidden; 
- 
+body, html {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+  font-size: 16px;
+  font-family: "Lato"; 
 }
 
 a {
@@ -155,7 +155,9 @@ a {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-@media screen and (max-width: 360px) {
+
+
+@media screen and (max-width: 450px) {
  
   #hero > div > h1 {
     font-size: 2em;
@@ -491,7 +493,7 @@ a {
     text-align: center;
   }
   #results {
-    height: 40vh;
+    height: 50vh;
    
   }
   
@@ -500,6 +502,10 @@ a {
 @media screen and (max-width: 360px) {
   #results > h3 {
     font-size: 1.5em;
+  }
+
+  #results {
+    height: 60vh;
    
   }
   
@@ -657,6 +663,7 @@ a {
   #contact {
     display: flex;
     flex-wrap: wrap;
+    height: 50vh
   }
   #contact >  div:first-of-type {
     flex-basis: 100%;
@@ -761,6 +768,9 @@ footer > div:nth-child(3) > div > p {
   footer > div:first-of-type > ul > li {
     padding: 0.75em
   }
+  
+footer > div:nth-child(3) > div {
+  flex-wrap: wrap;
 }
 
 
@@ -768,5 +778,6 @@ footer > div:nth-child(3) > div > p {
   footer > div:first-of-type > ul  {
     flex-wrap: wrap;
   }
+ 
 }
 
