@@ -14,11 +14,21 @@ a {
   width: 10em;
   height: 3em;
   border-radius: 8em;
+  border: 2px solid #f88360;
+
   background-color: #f88360;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #f88360;
+  border: 2px solid #f88360;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .scroll {
@@ -114,14 +124,10 @@ a {
 
 #hero > div > .button {
   font-size: 1.5em;
-  width: 8em;
-  height: 4em;
-  border-radius: 8em;
-  background-color: #f88360;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 /* SERVICE */
@@ -133,6 +139,10 @@ a {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 7.5em;
+}
+
+#service > h3 {
+  font-size: 2em
 }
 
 #service > div {
@@ -177,20 +187,31 @@ a {
   width: 2em;
 }
 
-#reviews > div {
+#reviews {
+  margin-top: 10em;
+}
+
+#reviews > div:first-of-type {
   position: relative;
   display: flex;
+  
   background-color: #fafafa;
-  margin-top: 10em;
   height: 50vh;
+ 
 }
+
+#reviews > div > div:first-of-type {
+  
+  height: 20em;
+}
+
 
 #reviews > div > img {
   height: 50em;
   position: absolute;
   z-index: 1;
   right: 12vw;
-  top: -10em;
+  top: -9em;
 }
 
 #reviewsContainer {
@@ -209,34 +230,55 @@ a {
   transition: visibility 0.3s linear, opacity 0.3s linear;
 }
 
+.reviewerName {
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.spacer {
+  display:block; 
+  height: 2px;
+}
+
+.reviewerOccupation {
+  font-size: 0.7em;
+  color: rgb(119, 119, 145);
+}
+
+.review:nth-of-type(1) {
+  opacity: 1;
+}
+
 #reviewsContainer > .review:not(:nth-of-type(1)) {
-  visibility: hidden;
+  visibility: visible;
 }
 
 .reviewButtons {
   position: relative;
-  top: 9em;
+  top: 12.75em;
 }
 
 .reviewButtons img {
-  height: 1.85em;
+  height: 1.5em;
 }
 
 #prevReview {
-  padding-right: 1em;
+  padding-right: 10px;
 }
 
 .reviewButton {
-  width: 2em;
+  width: 1.6em;
 }
 
 .reviewButton:hover {
   cursor: pointer;
+  transform: scale(1.2)
 }
 
 @media screen and (max-width: 1513px) {
-  .reviewButtons {
-    top: 11em;
+
+  #reviews > div > img {
+    right: 7vw;
   }
 }
 @media screen and (max-width: 1250px) {
@@ -250,8 +292,12 @@ a {
     right: 12vw;
     top: -3em;
   }
+
+}
+
+@media screen and (max-width: 970px) {
   .reviewButtons {
-    top: 13em;
+    top: 16em;
   }
 }
 

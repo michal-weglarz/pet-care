@@ -14,7 +14,6 @@ window.onscroll = () => {
 
 const reviewButtons = document.querySelectorAll(".reviewButton");
 let allReviews = Array.from(document.querySelectorAll(".review"));
-
 let changeReviews = (pressType, indexToShow) => {
   allReviews.forEach((item, index) => {
     if (index === indexToShow) {
