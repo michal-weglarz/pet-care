@@ -248,6 +248,8 @@ a {
 
 #reviews {
   margin-top: 10em;
+  background-color: #fafafa;
+
 }
 
 #reviews > div:first-of-type {
@@ -438,10 +440,22 @@ a {
     top: -8em;
   }
   .review {
-    font-size: 0.82em;
+    font-size: 1.2em;
   }
   .reviewButtons {
-    top: 9.25em;
+    top: 15em;
+  }
+}
+
+@media screen and (max-width: 345px) {
+  .reviewButtons {
+    top: 18em;
+  }
+}
+
+@media screen and (max-width: 270px) {
+  .reviewButtons {
+    top: 20em;
   }
 }
 
@@ -743,6 +757,11 @@ footer > div:nth-child(3) > div > p {
   width: 68vw;
   background-color: rgba(151, 151, 151, 0.562);
   align-self: center;
+}
+
+#footer-icons > img {
+  width: 3em;
+  filter: invert(100%);
 }
 
 @media screen and (max-width: 700px) {
